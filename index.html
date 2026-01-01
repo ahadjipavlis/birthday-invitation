@@ -9,7 +9,7 @@
     :root{
       --card-w: min(92vw, 520px);
       --card-h: calc(var(--card-w) * (1104 / 736));
-      --blue: #1f4fff; /* ΤΟ ΕΝΑ ΚΑΙ ΜΟΝΑΔΙΚΟ ΜΠΛΕ */
+      --blue: #1f4fff;
     }
 
     html, body{
@@ -54,7 +54,7 @@
       50%{ transform: translateY(-14px); }
     }
 
-    /* ===== ΠΑΝΩ ΚΕΙΜΕΝΟ (ΣΤΑΘΕΡΟ) ===== */
+    /* ===== ΠΑΝΩ ΚΕΙΜΕΝΟ ===== */
     .text-wrap{
       position:absolute;
       left:7.5%;
@@ -82,6 +82,7 @@
       align-items:center;
     }
 
+    /* ⚠️ ΓΕΝΙΚΑ span ΜΑΥΡΑ */
     .bottom-left span{
       display:block;
       font-weight:800;
@@ -90,18 +91,18 @@
       margin-bottom:4px;
     }
 
-    /* ===== ΕΥΑΓΓΕΛΟΣ (ΙΔΙΟ ΜΠΛΕ ΜΕ ΤΟ 7) ===== */
-    .big-name{
+    /* ✅ ΕΥΑΓΓΕΛΟΣ – ΜΠΛΕ, ΜΕΓΑΛΟ, ANIMATED */
+    .bottom-left .big-name{
       font-weight:900;
       font-size: clamp(36px, 7.5vw, 52px);
-      color: var(--blue);
+      color: var(--blue) !important;
       text-transform: uppercase;
       letter-spacing:1px;
       text-shadow: 0 3px 12px rgba(0,0,0,.45);
       animation: bounce 1.6s ease-in-out infinite;
     }
 
-    /* ===== 7 ===== */
+    /* ✅ 7 – ΙΔΙΟ ΜΠΛΕ */
     .big-seven{
       font-weight:900;
       font-size: clamp(100px, 20vw, 180px);
@@ -127,7 +128,7 @@
     <div class="bg"></div>
     <div class="shade"></div>
 
-    <!-- ΠΑΝΩ ΚΕΙΜΕΝΟ -->
+    <!-- ΠΑΝΩ -->
     <div class="text-wrap">
       <div class="text">
         <span>Αγαπημένοι μου φίλοι και φίλες,</span>
@@ -138,7 +139,7 @@
       </div>
     </div>
 
-    <!-- ΚΑΤΩ BLOCK -->
+    <!-- ΚΑΤΩ -->
     <div class="bottom-wrap">
       <div class="bottom-left">
         <span class="big-name">ΕΥΑΓΓΕΛΟΣ</span>
