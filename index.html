@@ -48,7 +48,13 @@
       );
     }
 
-    /* ===== ΠΑΝΩ ΚΕΙΜΕΝΑ ===== */
+    /* ===== ANIMATION ===== */
+    @keyframes bounce{
+      0%,100%{ transform: translateY(0); }
+      50%{ transform: translateY(-14px); }
+    }
+
+    /* ===== ΠΑΝΩ ΚΕΙΜΕΝΟ (ΣΤΑΘΕΡΟ) ===== */
     .text-wrap{
       position:absolute;
       left:7.5%;
@@ -84,7 +90,7 @@
       margin-bottom:4px;
     }
 
-    /* ===== ΕΥΑΓΓΕΛΟΣ ===== */
+    /* ===== ΕΥΑΓΓΕΛΟΣ (ANIMATED) ===== */
     .big-name{
       font-weight:900;
       font-size: clamp(36px, 7.5vw, 52px);
@@ -92,16 +98,18 @@
       text-transform: uppercase;
       letter-spacing:1px;
       text-shadow: 0 3px 12px rgba(0,0,0,.45);
-      margin-bottom:6px;
+      animation: bounce 1.6s ease-in-out infinite;
     }
 
-    /* ===== 7 ===== */
+    /* ===== 7 (ANIMATED) ===== */
     .big-seven{
       font-weight:900;
       font-size: clamp(100px, 20vw, 180px);
       line-height:1;
       color: var(--blue);
       text-shadow: 0 4px 18px rgba(0,0,0,.4);
+      animation: bounce 1.6s ease-in-out infinite;
+      animation-delay: .2s;
     }
 
     @media (max-width:420px){
@@ -119,7 +127,7 @@
     <div class="bg"></div>
     <div class="shade"></div>
 
-    <!-- ΠΑΝΩ -->
+    <!-- ΠΑΝΩ ΚΕΙΜΕΝΟ -->
     <div class="text-wrap">
       <div class="text">
         <span>Αγαπημένοι μου φίλοι και φίλες,</span>
@@ -130,7 +138,7 @@
       </div>
     </div>
 
-    <!-- ΚΑΤΩ -->
+    <!-- ΚΑΤΩ BLOCK -->
     <div class="bottom-wrap">
       <div class="bottom-left">
         <span class="big-name">ΕΥΑΓΓΕΛΟΣ</span>
