@@ -47,11 +47,9 @@
       pointer-events:none;
     }
 
-    /* ===== ΜΠΑΛΕΣ ΠΟΥ ΓΥΡΙΖΟΥΝ ===== */
     .ball{
       position:absolute;
       background: url("ball.png") center/contain no-repeat;
-      animation: spin linear infinite;
       pointer-events:none;
       z-index:2;
       filter: drop-shadow(0 8px 18px rgba(0,0,0,.35));
@@ -62,7 +60,6 @@
       aspect-ratio:1/1;
       top:4%;
       right:4%;
-      animation-duration:1s;
     }
 
     .ball.big{
@@ -70,14 +67,13 @@
       aspect-ratio:1/1;
       bottom:4%;
       right:6%;
-      animation-duration:1.35s;
+      animation: spin 1.4s linear infinite;
     }
 
     @keyframes spin{
       to{ transform: rotate(360deg); }
     }
 
-    /* ===== ΠΑΝΩ ΚΕΙΜΕΝΟ ===== */
     .text-wrap{
       position:absolute;
       left:7.5%;
@@ -110,7 +106,6 @@
     .text span:nth-child(4){animation-delay:.7s}
     .text span:nth-child(5){animation-delay:.9s}
 
-    /* ===== ΚΑΤΩ BLOCK ===== */
     .bottom-wrap{
       position:absolute;
       left:7.5%;
@@ -141,7 +136,6 @@
       color:#000;
     }
 
-    /* ===== ΤΟ 7 (POP + BOUNCE) ===== */
     .big-seven{
       font-weight:900;
       font-size: clamp(90px, 18vw, 160px);
@@ -175,6 +169,7 @@
       0%,100%{ transform: translateY(0); }
       50%{ transform: translateY(-18px); }
     }
+
 
     @media (max-width:420px){
       .bottom-wrap{
