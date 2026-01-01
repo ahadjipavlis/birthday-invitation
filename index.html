@@ -4,11 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Πρόσκληση Γενεθλίων</title>
+
   <style>
     :root{
       --card-w: min(92vw, 520px);
       --card-h: calc(var(--card-w) * (1104 / 736));
     }
+
     html, body{
       height:100%;
       margin:0;
@@ -17,26 +19,34 @@
       display:grid;
       place-items:center;
     }
-    a.invite{
+
+    .invite{
       width: var(--card-w);
       height: var(--card-h);
-      display:block;
       position:relative;
-      text-decoration:none;
       border-radius: 24px;
       overflow:hidden;
       box-shadow: 0 18px 60px rgba(0,0,0,.55);
     }
+
     .bg{
-      position:absolute; inset:0;
+      position:absolute;
+      inset:0;
       background-image: url("background.jpg");
       background-size: cover;
       background-position: center;
     }
+
     .shade{
-      position:absolute; inset:0;
-      background: radial-gradient(closest-side at 50% 45%, rgba(255,255,255,0), rgba(0,0,0,.35));
+      position:absolute;
+      inset:0;
+      background: radial-gradient(
+        closest-side at 50% 45%,
+        rgba(255,255,255,0),
+        rgba(0,0,0,.35)
+      );
     }
+
     .text-wrap{
       position:absolute;
       left:7.5%;
@@ -48,24 +58,25 @@
       justify-content:center;
       text-align:center;
       padding: 18px 16px;
-      border-radius: 18px;
-      background: rgba(255,255,255,.65);
-      backdrop-filter: blur(6px);
-      border: 1px solid rgba(255,255,255,.45);
-      animation: breathe 3s ease-in-out infinite;
+      background: transparent;
+      border: none;
     }
+
     .text{
-      color:#171717;
+      color:#ffffff;
       font-weight:800;
-      line-height:1.2;
-      font-size: clamp(18px, 3.4vw, 24px);
+      line-height:1.25;
+      font-size: clamp(18px, 3.6vw, 26px);
+      text-shadow: 0 2px 6px rgba(0,0,0,.6);
     }
+
     .text span{
       display:block;
       opacity:0;
-      transform: translateY(10px);
+      transform: translateY(12px);
       animation: popIn .9s ease forwards;
     }
+
     .text span:nth-child(1){animation-delay:.1s}
     .text span:nth-child(2){animation-delay:.3s}
     .text span:nth-child(3){animation-delay:.5s}
@@ -73,19 +84,19 @@
     .text span:nth-child(5){animation-delay:.9s}
 
     @keyframes popIn{
-      to{opacity:1;transform:translateY(0)}
-    }
-    @keyframes breathe{
-      0%,100%{transform:scale(1)}
-      50%{transform:scale(1.012)}
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
     }
   </style>
 </head>
+
 <body>
-  <!-- Link points to itself -->
-  <a class="invite" href="#">
+  <div class="invite">
     <div class="bg"></div>
     <div class="shade"></div>
+
     <div class="text-wrap">
       <div class="text">
         <span>Αγαπημένοι μου φίλοι και φίλες,</span>
@@ -95,6 +106,6 @@
         <span>στις 3.30 μ.μ</span>
       </div>
     </div>
-  </a>
+  </div>
 </body>
 </html>
