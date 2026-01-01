@@ -48,12 +48,6 @@
       );
     }
 
-    /* ===== BOUNCE ANIMATION ===== */
-    @keyframes bounce{
-      0%,100%{ transform: translateY(0); }
-      50%{ transform: translateY(-16px); }
-    }
-
     /* ===== ΠΑΝΩ ΚΕΙΜΕΝΑ ===== */
     .text-wrap{
       position:absolute;
@@ -68,14 +62,8 @@
       font-weight:800;
       font-size: clamp(18px, 3.6vw, 26px);
       color:#000;
-      animation: bounce 1.6s ease-in-out infinite;
+      margin-bottom:6px;
     }
-
-    .text span:nth-child(1){ animation-delay:0s; }
-    .text span:nth-child(2){ animation-delay:.15s; }
-    .text span:nth-child(3){ animation-delay:.3s; }
-    .text span:nth-child(4){ animation-delay:.45s; }
-    .text span:nth-child(5){ animation-delay:.6s; }
 
     /* ===== ΚΑΤΩ BLOCK ===== */
     .bottom-wrap{
@@ -93,23 +81,18 @@
       font-weight:800;
       font-size: clamp(16px, 3.5vw, 22px);
       color:#000;
-      animation: bounce 1.6s ease-in-out infinite;
+      margin-bottom:4px;
     }
-
-    .bottom-left span:nth-child(2){ animation-delay:.9s; }
-    .bottom-left span:nth-child(3){ animation-delay:1.05s; }
-    .bottom-left span:nth-child(4){ animation-delay:1.2s; }
 
     /* ===== ΕΥΑΓΓΕΛΟΣ ===== */
     .big-name{
       font-weight:900;
       font-size: clamp(36px, 7.5vw, 52px);
-      color: var(--blue) !important;
+      color: var(--blue);
       text-transform: uppercase;
       letter-spacing:1px;
       text-shadow: 0 3px 12px rgba(0,0,0,.45);
-      animation: bounce 1.6s ease-in-out infinite;
-      animation-delay:.75s;
+      margin-bottom:6px;
     }
 
     /* ===== 7 ===== */
@@ -119,8 +102,6 @@
       line-height:1;
       color: var(--blue);
       text-shadow: 0 4px 18px rgba(0,0,0,.4);
-      animation: bounce 1.6s ease-in-out infinite;
-      animation-delay:.9s;
     }
 
     @media (max-width:420px){
